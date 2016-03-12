@@ -1,0 +1,38 @@
+---
+title: 'Applied Crypto Hardening - Draft'
+author:
+- name: Wolfgang Breyha
+  affiliation: University of Vienna
+- name: David Durvaux
+  affiliation: CERT.be
+- name: Tobias Dussa
+  affiliation: KIT-CERT
+- name: L. Aaron Kaplan
+  affiliation: CERT.at
+- name: Florian Mendel
+  affiliation: A-SIT/IAIK
+- name: Christian Mock
+  affiliation: coretec.at
+- name: Manuel Koschuch
+  affiliation: FH Campus Wien
+- name: Adi Kriegisch
+  affiliation: VRVis
+- name: Ulrich Pöschl
+  affiliation: MilCERT Austria
+- name: Ramin Sabet
+  affiliation: A-Trust
+- name: Berg San
+- name: Ralf Schlatterbeck
+  affiliation: Runtux.com
+- name: Thomas Schreck
+  affiliation: Friedrich-Alexander University Erlangen-Nuremberg
+- name: Alexander Würstlein
+- name: Aaron Zauner
+  affiliation: azet.org
+- name: Pepi Zawodsky
+  affiliation: maclemon.at
+date: March 12, 2016
+tags: [cryptography]
+link-citations: true
+papersize: a4
+...

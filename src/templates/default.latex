@@ -1,0 +1,97 @@
+%%%
+%%% Applied Crypto Hardening
+%%% bettercrypto.org
+%%%
+\RequirePackage{fix-cm}
+% change to \iffalse this if you want to make a final version (and remove the DRAFT watermark)
+\iffalse
+\PassOptionsToPackage{final}{graphicx}
+\PassOptionsToPackage{final}{listings}
+\documentclass{scrreprt}
+\else
+\documentclass{scrreprt}
+\fi
+\input{common/system}
+\input{common/lstautounindent}
+\input{common/style}
+\input{common/commands}
+\input{common/configfiles}
+
+\configurationbaseurl{https://bettercrypto.org/static/}
+
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+$if(subtitle)$
+\providecommand{\subtitle}[1]{}
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author.name$$sep$ \and $endfor$}
+$endif$
+\date{$date$}
+
+\begin{document}
+\begin{titlepage}
+  \begin{center}
+    \includegraphics[scale=0.5]{img/logo}
+    \vspace{45pt}
+    \HorRule
+    \medskip
+    {\fontsize{35}{36} \bfseries $title$\par}
+    \bigskip
+  \end{center}
+  \begin{flushleft}
+    {\large \color{intersectgreen} 
+$for(author)$
+$author.name$,
+$endfor$
+      \par}
+    \bigskip
+($for(author)$
+$if(author.affiliation)$
+$if(author.affiliation)$$author.affiliation$, $endif$
+$endif$
+$endfor$)
+  \end{flushleft}
+  \medskip
+  \HorRule
+  \begin{center}
+    \today
+  \end{center}
+\end{titlepage}
+
+\begin{center}
+  \includegraphics[width=.9\textwidth]{img/neboltai.jpg}\par
+  \vbox{\emph{Do not talk unencrypted}}
+\end{center}
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+\tableofcontents
+$body$
+
+\appendix
+\lstlistoflistings
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+$endif$
+\printindex[style=achindex]
+
+\end{document}
+\end{document}

@@ -20,8 +20,10 @@
 *.synctex.gz
 # specific 
 applied-crypto-hardening.dvi
-applied-crypto-hardening.pdf
+applied-crypto-hardening.html
 applied-crypto-hardening.markdown
+applied-crypto-hardening.pdf
+applied-crypto-hardening.tex
 *.gummi
 *.swp
 applied-crypto-hardening/
@@ -30,4 +32,3 @@ old/*
 practical_settings/*_generated.tex
 cipher_suites/*_generated.tex
 *_generated.tex
-

@@ -1,12 +1,12 @@
-all: suite_names.tex
+all: suite_names.md
 
 install: all
-	cp suite_names.tex ../../src/
+	cp suite_names.md ../../src/
 
 .DELETE_ON_ERROR:
 
-suite_names.tex: tls-parameters-4.csv openssl-ciphers.txt template.tex buildsuites.pl
-	perl buildsuites.pl template.tex tls-parameters-4.csv openssl-ciphers.txt > $@
+suite_names.md: tls-parameters-4.csv openssl-ciphers.txt template.md buildsuites.pl
+	perl buildsuites.pl template.md tls-parameters-4.csv openssl-ciphers.txt > $@
 
 tls-parameters-4.csv:
 	wget https://www.iana.org/assignments/tls-parameters/tls-parameters-4.csv
